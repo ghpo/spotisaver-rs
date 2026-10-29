@@ -19,9 +19,7 @@ The panel UI is currently in Brazilian Portuguese.
 
 ### 1. Install dependencies
 
-```sh
-omarchy pkg add yt-dlp zenity
-```
+Install `yt-dlp` and `zenity` from the Arch repositories with your package manager. Both are required at runtime.
 
 ### 2. Install the `spotisaver` helper
 
