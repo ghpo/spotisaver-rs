@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "ghpo.spotisaver",
+  "name": "Spotisaver",
+  "version": "1.0.0",
+  "author": "ghpo",
+  "license": "MIT",
+  "description": "Baixe playlists e músicas do Spotify direto da barra, com progresso ao vivo.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Spotisaver.qml"
+  },
+  "barWidget": {
+    "displayName": "Spotisaver",
+    "description": "Cole um link do Spotify, escolha a pasta e baixe com progresso ao vivo.",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "icon": "󰓇",
+      "downloadDir": "",
+      "format": "mp3",
+      "jobs": 3,
+      "binary": "spotisaver"
+    },
+    "schema": [
+      {
+        "key": "icon",
+        "type": "string",
+        "label": "Ícone",
+        "description": "Glifo exibido no botão da barra",
+        "defaultValue": "󰓇"
+      },
+      {
+        "key": "downloadDir",
+        "type": "string",
+        "label": "Pasta de download",
+        "description": "Onde salvar os arquivos (vazio = perguntar na primeira vez)",
+        "defaultValue": ""
+      },
+      {
+        "key": "format",
+        "type": "string",
+        "label": "Formato de áudio",
+        "description": "Formato usado pelo yt-dlp (mp3, m4a, opus...)",
+        "defaultValue": "mp3"
+      },
+      {
+        "key": "jobs",
+        "type": "integer",
+        "label": "Downloads simultâneos",
+        "description": "Quantas faixas baixar ao mesmo tempo",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "defaultValue": 3
+      },
+      {
+        "key": "binary",
+        "type": "string",
+        "label": "Binário do spotisaver",
+        "description": "Caminho do executável (padrão: spotisaver no PATH)",
+        "defaultValue": "spotisaver"
+      }
+    ]
+  }
+}

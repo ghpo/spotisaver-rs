@@ -1,0 +1,15 @@
+[package]
+name = "spotisaver"
+version = "0.1.0"
+edition = "2021"
+description = "Download Spotify playlists and tracks with live progress"
+license = "MIT"
+repository = "https://github.com/ghpo/spotisaver-rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.12", features = ["rustls-tls"], default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
